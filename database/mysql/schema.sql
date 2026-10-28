@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS interstate_traffic_db;
 USE interstate_traffic_db;
 
--- Drop dependent tables first to respect Foreign Key constraints
+-- Drop tables if they exist.
 DROP TABLE IF EXISTS traffic_readings;
 DROP TABLE IF EXISTS weather_observations;
 DROP TABLE IF EXISTS calendar_events;

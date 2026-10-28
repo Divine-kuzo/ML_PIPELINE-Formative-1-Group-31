@@ -1,0 +1,50 @@
+[
+  {
+    "_id": { "$oid": "653f1a2b8e4f1a2b3c4d5e01" },
+    "recorded_at": { "$date": "2012-10-02T09:00:00.000Z" },
+    "traffic_volume": 5545,
+    "observed": true,
+    "calendar": {
+      "date": "2012-10-02",
+      "hour": 9,
+      "day_name": "Tuesday",
+      "is_weekend": false,
+      "holiday": {
+        "is_holiday": false,
+        "name": "None"
+      }
+    },
+    "weather": {
+      "temp_kelvin": 288.28,
+      "rain_1h_mm": 0.0,
+      "snow_1h_mm": 0.0,
+      "clouds_coverage_pct": 40,
+      "main": "Clouds",
+      "description": "scattered clouds"
+    }
+  },
+  {
+    "_id": { "$oid": "653f1a2b8e4f1a2b3c4d5e02" },
+    "recorded_at": { "$date": "2012-12-25T10:00:00.000Z" },
+    "traffic_volume": 1248,
+    "observed": true,
+    "calendar": {
+      "date": "2012-12-25",
+      "hour": 10,
+      "day_name": "Tuesday",
+      "is_weekend": false,
+      "holiday": {
+        "is_holiday": true,
+        "name": "Christmas Day"
+      }
+    },
+    "weather": {
+      "temp_kelvin": 264.45,
+      "rain_1h_mm": 0.0,
+      "snow_1h_mm": 0.0,
+      "clouds_coverage_pct": 90,
+      "main": "Snow",
+      "description": "light snow"
+    }
+  }
+]

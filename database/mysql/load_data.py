@@ -20,11 +20,10 @@ try:
 except (ValueError, TypeError):
   DB_PORT = 3306
 
-# URL-encode user and password safely in case they contain special characters like @, :, !
+# Encode user and password
 safe_user = urllib.parse.quote_plus(DB_USER)
 safe_password = urllib.parse.quote_plus(DB_PASSWORD)
 
-# If on Ubuntu default socket authentication with empty password, try unix_socket connection
 connect_args = {}
 if os.path.exists("/var/run/mysqld/mysqld.sock") and (
     not DB_PASSWORD or DB_HOST in ["localhost", "127.0.0.1"]
