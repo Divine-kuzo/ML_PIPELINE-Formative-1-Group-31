@@ -44,3 +44,39 @@ This project develops an end-to-end machine learning pipeline to predict hourly 
 Open the notebook in Google Colab or Jupyter and install the dependencies listed in `requirements.txt`.
 
 The dataset is available in the repository for database integration.
+
+
+
+## Task 3: Traffic Data API
+
+A Flask API was developed to perform CRUD operations on traffic data stored in MySQL and MongoDB.
+
+### MySQL Endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/api/mysql/traffic` | Retrieve traffic records |
+| POST | `/api/mysql/traffic` | Create a traffic record |
+| GET | `/api/mysql/traffic/<record_id>` | Retrieve one record |
+| PUT | `/api/mysql/traffic/<record_id>` | Update a record |
+| DELETE | `/api/mysql/traffic/<record_id>` | Delete a record |
+| GET | `/api/mysql/traffic/latest` | Retrieve the latest record |
+| GET | `/api/mysql/traffic/range?start=YYYY-MM-DD&end=YYYY-MM-DD` | Retrieve records within a date range |
+
+### MongoDB Endpoints
+
+The same operations are available through `/api/mongodb/traffic`, including retrieving a record by ID, retrieving the latest record, and filtering records by date range.
+
+### Running the API
+
+From the project root, activate the virtual environment and run:
+
+```bash
+python api/app.py
+```
+
+The API runs locally at `http://127.0.0.1:5000`.
+
+### Testing
+
+All CRUD operations, latest-record endpoints, and date-range endpoints were tested successfully for both MySQL and MongoDB. Successful requests returned the expected HTTP status codes.
