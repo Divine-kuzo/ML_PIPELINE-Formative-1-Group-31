@@ -45,7 +45,53 @@ Open the notebook in Google Colab or Jupyter and install the dependencies listed
 
 The dataset is available in the repository for database integration.
 
+# Task 2: Database Implementation & Analytical Queries(SQL and MongoDB databases)
 
+This tasks sets up, populates, and queries both the relational (**MySQL**) and (**MongoDB**) databases using the cleaned dataset (`data/processed/traffic_hourly_cleaned.csv`).
+
+---
+
+## 1. Prerequisites & Environment Setup
+In the project root, define the required database credentials in the environment configuration file.
+
+```env
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_mysql_password
+DB_DATABASE=interstate_traffic_db
+
+# MongoDB Configuration
+MONGO_URI=mongodb://127.0.0.1:27017/
+MONGO_DB_NAME=interstate_traffic_db
+
+### Install required python dependencies
+
+pip install pymysql sqlalchemy pymongo pandas python-dotenv
+
+### Initialize schema
+
+mysql -u root -p < database/mysql/schema.sql
+
+### Load data
+
+python database/mysql/load_data_mysql.py
+
+### Execute Queries
+
+mysql -u root -p interstate_traffic_db < database/mysql/queries.sql
+
+### MongoDB
+
+### Ingest Data
+
+Ensure the local MongoDB daemon is running on port 27017, then execute:
+
+python database/mongodb/load_data_mongo.py
+
+### Execute queries
+
+mongosh interstate_traffic_db database/mongodb/queries.js
 
 ## Task 3: Traffic Data API
 
