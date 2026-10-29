@@ -4,3 +4,8 @@ matplotlib
 seaborn
 scikit-learn
 joblib
+Flask
+SQLAlchemy
+PyMySQL
+pymongo
+python-dotenv
