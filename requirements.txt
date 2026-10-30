@@ -2,8 +2,9 @@ pandas
 numpy
 matplotlib
 seaborn
-scikit-learn
+scikit-learn==1.6.1
 joblib
+requests
 Flask
 SQLAlchemy
 PyMySQL
